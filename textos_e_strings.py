@@ -5,7 +5,14 @@
 # use o separador de milhar e duas casas decimais, e a margem seja exibida como uma
 # porcentagem inteira.
 
+faturamento = 45000
+custo = 23500
+lucro = faturamento - custo
+margem_lucro = lucro / faturamento
 
+print ("\nExercício 1:")
+print (f"O lucro foi de {lucro:,.2f}") #Para mudar formatação de textos(strings) e fazer a incorporação de váriaveis mais facilmente a resposta usar o f de format fora da string para formatar, o {} para adicionar variável, : para indicar qual é a formatação daquela variável.
+print (f"A margem de lucro foi de {margem_lucro:.0%}")
 
 # Exercício 2: Padronização de Dados de CRM (Setor de Vendas) Um vendedor cadastrou
 # um cliente com os dados desorganizados no sistema: nome = " mArCoS aNtOnIo
@@ -16,7 +23,31 @@
 # (formato de nome próprio).
 # 3. Deixar o e-mail todo em letras minúsculas. Exiba os resultados finais no console.
 
+nome =  " mArCoS aNtOnIo "
+email ="  MARCOS.ROCHA@GMAIL.COM "
 
+nome = nome.title()
+email = email.lower()
+
+# Para formatar strings utilizamos funções prontas do python.
+# Para alterar a escrita em si:
+# upper -> Todas maiúsculas.
+# lower -> Todas minúsculas.
+# capitalize -> Primeira letra da string maiúscula.
+# title -> Primeira linha de cada palavra maiúscula.
+# swapcase -> Inversão de estado(maiúsculo por minúsculo e vice-versa)
+
+nome = nome.strip()
+email = email.strip()
+
+# isupper -> Verifica se todos os caracteres são maiúsculos
+# islower -> Verifica se todos os caracteres são minúsculos
+# istitle -> Verifica se a string segue o formato de título 
+# strip -> Remove espaços em branco do início e do final da string
+# split -> Divide a string em uma lista, útil para manipular pedaços dela
+
+print ("\nExercício 2:")
+print (f"Nome: {nome}\nEmail: {email}")
 
 # Exercício 3: Migração de Servidor de E-mail (Setor de TI) Sua empresa mudou de nome
 # e todos os funcionários que usavam o domínio @empresa.com.br agora devem usar o
