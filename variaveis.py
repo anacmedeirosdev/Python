@@ -12,6 +12,8 @@ faturamento_final = faturamento + bonus
 print ("\nExercício 1:")
 print ("O faturamento final da empresa é de R$",faturamento_final)
 
+# --------------------------------------------------------------------------------------
+
 # Exercício 2: Controle de Estoque de E-commerce (Logística)
 # Cenário: Um e-commerce começou o dia com 250 unidades de um smartphone no
 # estoque. Durante o dia, foram vendidos 78 unidades e chegaram mais 100 unidades de um
@@ -28,6 +30,8 @@ if estoque == 1:
 else:
     print ("O estoque atual tem",estoque,"peça.")
 
+# --------------------------------------------------------------------------------------
+
 # Exercício 3: Divisão de Cargas (Logística/Transporte)
 # Cenário: Uma transportadora precisa levar 1.250 caixas em caminhões pequenos. Cada
 # caminhão suporta exatamente 12 caixas. Objetivo: 1. Quantos caminhões sairão
@@ -40,6 +44,8 @@ caixas_restantes = caixas % 12
 print ("\nExercício 3:")
 print ("  -Objetivo 1:",caminhoes_cheios,"caminhões sairão cheios.")
 print ("  -Objetivo 2: Sobraram", caixas_restantes,"caixas para serem enviadas em uma última viagem.")
+
+# --------------------------------------------------------------------------------------
 
 # Exercício 4: Análise de Margem de Lucro (Financeiro)
 # Cenário: Uma consultoria faturou R$ 15.000,00 em um projeto. Os custos fixos foram de R$
@@ -56,6 +62,8 @@ meta_atingida = bool(lucro > faturamento * 0.30)
 print ("\nExercício 3:")
 print ("O lucro foi R$",lucro,"\nMeta de 30% de lucro atingida:",meta_atingida)
 
+# --------------------------------------------------------------------------------------
+
 # Exercício 5: Conversão de Tempo de Contrato (Gestão de Projetos)
 # Cenário: Um contrato de manutenção de software tem a duração de 40 meses. O cliente
 # quer ver esse tempo no formato: "X anos e Y meses". Objetivo: Utilize os operadores de
@@ -66,6 +74,7 @@ ano = 40 // duração_contrato_mes
 mes = duração_contrato_mes % 12
 print ("\nExercício 5:")
 print ("O contrato de manutenção de software tem duração de:",ano,"anos e", mes,"meses")
+
 
 # Print para deixar esteticamente organizado no terminal
 print("")

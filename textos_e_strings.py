@@ -11,8 +11,11 @@ lucro = faturamento - custo
 margem_lucro = lucro / faturamento
 
 print ("\nExercício 1:")
-print (f"O lucro foi de {lucro:,.2f}") #Para mudar formatação de textos(strings) e fazer a incorporação de váriaveis mais facilmente a resposta usar o f de format fora da string para formatar, o {} para adicionar variável, : para indicar qual é a formatação daquela variável.
+print (f"O lucro foi de {lucro:,.2f}") 
+#Para mudar formatação de textos(strings) e fazer a incorporação de váriaveis mais facilmente a resposta usar o f de format fora da string para formatar, o {} para adicionar variável, : para indicar qual é a formatação daquela variável.
 print (f"A margem de lucro foi de {margem_lucro:.0%}")
+
+# --------------------------------------------------------------------------------------
 
 # Exercício 2: Padronização de Dados de CRM (Setor de Vendas) Um vendedor cadastrou
 # um cliente com os dados desorganizados no sistema: nome = " mArCoS aNtOnIo
@@ -49,13 +52,22 @@ email = email.strip()
 print ("\nExercício 2:")
 print (f"Nome: {nome}\nEmail: {email}")
 
+# --------------------------------------------------------------------------------------
+
 # Exercício 3: Migração de Servidor de E-mail (Setor de TI) Sua empresa mudou de nome
 # e todos os funcionários que usavam o domínio @empresa.com.br agora devem usar o
 # domínio @grupocorp.com. O e-mail do funcionário é andre_silva@empresa.com.br.
 # Crie um código que substitua automaticamente o domínio antigo pelo novo e exiba o novo
 # endereço de e-mail.
 
+# Para fazer isso usamos o replace, função que serve para substituir algo por outra coisa, então ela recebe dois parâmetros: o que será removido e o que será adicionado.
+email = "andre_silva@empresa.com.br"
+email = email.replace("@empresa.com.br","@grupocorp.com")
 
+print ("\nExercício 3:")
+print (f"Email: {email}")
+
+# --------------------------------------------------------------------------------------
 
 # Exercício 4: Extração de Username para Log (Setor de Segurança) Para criar um log de
 # acessos, o sistema precisa extrair apenas a parte do nome do usuário de um e-mail
@@ -63,7 +75,17 @@ print (f"Nome: {nome}\nEmail: {email}")
 # beatriz.oliveira@grupocorp.com, use a função .find() e o fatiamento de texto
 # para extrair e exibir apenas o nome beatriz.oliveira.
 
+email = "beatriz.oliveira@grupocorp.com"
+posicao_arroba = email.find("@")
+# find indica em que posição está determinada string.
 
+nome_email = email[:posicao_arroba]
+# Para fazer separação de uma string é preciso saber pelo menos o início ou o fim dela. É feito da seguinte forma: string[inicio:fim:passo], passo não é obrigatório e indica de quanto em quanto a string será checada.
+
+print ("\nExercício 4:")
+print (f"Nome: {nome_email}")
+
+# --------------------------------------------------------------------------------------
 
 # Exercício 5: Personalização de E-mail de Marketing (Setor de Marketing) O marketing
 # quer enviar um e-mail de boas-vindas. O cliente forneceu o nome completo: lucas
@@ -74,6 +96,18 @@ print (f"Nome: {nome}\nEmail: {email}")
 # 3. Formatar o nome com a primeira letra maiúscula.
 # 4. Exibir a mensagem: "Olá, [Primeiro Nome], seja bem-vindo ao nosso clube!"
 
+nome = "lucas ferreira souza"
+nome = nome.title()
+
+posicao_espaco = nome.find(" ")
+primeiro_nome = nome[:posicao_espaco:]
+
+print ("\nExercício 5:")
+print (f"Olá, {primeiro_nome}, seja bem-vindo ao nosso clube!")
+
+#Pensei em fazer de outra forma, inclusive, mais simples que o comando da questão.
+nomes = nome.split()
+print (f"Olá, {nomes[0]}, seja bem-vindo ao nosso clube!")
 
 
 # Print para deixar esteticamente organizado no terminal
